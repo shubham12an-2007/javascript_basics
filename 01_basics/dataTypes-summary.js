@@ -42,3 +42,33 @@ console.log(typeof id);   // symbol
 console.log(typeof scoreValue);   // number
 console.log(typeof score);  // number
 
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (primitive data types ) , Heap (non primitive data types)
+
+let myYoutubeName = "shubham@123.com" ;
+
+
+// primtive data types are in stack memory and values are passed by copy here and actual me changes nhi hote
+let anotherName = myYoutubeName ;
+anotherName = "shubhamsingh.com" ;
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+
+// heap me non primitive data types jaate hain 
+// aur heap me pass by refrence hota hain and changes permanent hote hain
+let userOne = {
+    email : "user@google.com" ,
+    upi : "user@ybl" ,
+}
+
+let userTwo  = userOne ;
+
+userTwo.email = "shubham@google.com" ;
+
+
+console.log(userOne.email);
+console.log(userTwo.email);
