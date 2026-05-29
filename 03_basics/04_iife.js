@@ -13,7 +13,7 @@
 ((name) => {
     console.log("DB CONNECTED TWO " + name);
     
-}) ("shubham")
+}) ("shubham")                                     // parameter in iife 
 
 
 
