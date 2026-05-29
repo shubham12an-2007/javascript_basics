@@ -67,3 +67,34 @@ console.log(Object.entries(tinderUser));   // array of key and value pairs
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // true 
 
 
+
+// Objects destructuring  //
+
+const course  = {
+    coursename : "js in hindi" ,
+    price : "999" ,
+    courseInstructor: "hitesh" ,
+}
+
+const {courseInstructor : instructor } = course
+
+// console.log(courseInstructor);   // hitesh 
+console.log(instructor);
+
+
+// const navbar = ({company}) => {
+
+// }
+
+// navbar(company = "hitesh")
+
+//JSON (JAVA SCRIPT OBJECT NOTATION )
+
+// {
+//     "name" :"hitesh" ,
+//     "coursename" : "js in hindi" ,
+//     "price" : "free" ,
+// }
+
+
+
