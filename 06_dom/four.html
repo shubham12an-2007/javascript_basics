@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAI AUR CODE | DOM </title>
+</head>
+<body style="background-color: #212; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+
+    // First Function to add Language 
+    function addLanguage(langName) {
+        const ulItems = document.querySelector(".language") ;
+
+        const newListItem = document.createElement("li") ;
+        newListItem.innerHTML = langName ;
+        ulItems.appendChild(newListItem) ;
+
+    }
+
+    // optimised method 
+    function addOptiLanguage(languageName) {
+        const newItem = document.createElement("li") ;
+
+        newItem.appendChild(document.createTextNode(languageName)) ;
+
+        document.querySelector("li").appendChild(newItem) ;
+    }
+
+    addLanguage("Python") ;
+    addLanguage('TypeScript') ;
+    addOptiLanguage("Node js ")  ;
+    addOptiLanguage("Go-lang") ;
+
+    // Editing the values 
+    const secondLanguage = document.querySelector("li:nth-child(2)") ;
+    
+    const newLi = document.createElement("li")
+    newLi.textContent = 'Mojo' ;
+
+    // replace wih 
+    secondLanguage.replaceWith(newLi)   // replacing the old onw with new one 
+
+    // edit 
+    const firstLanguage = document.querySelector("li:nth-child(1)") ;
+
+    const newLang = document.createElement("li");
+    newLang.appendChild(document.createTextNode("Java")) ;
+
+    firstLanguage.replaceWith(newLang) ;
+
+    // remove 
+    const lastLanguage = document.querySelector("li:last-child") ;
+    lastLanguage.remove() ;
+
+</script>
+</html>
