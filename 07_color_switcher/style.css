@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease; /* Isse color smooth change hoga */
+}
+
+/* Navigation Bar styling */
+.nav-bar {
+    background-color: #e0e0e0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #000;
+    background-color: #f0f0f0;
+    padding: 6px 15px;
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.nav-btn.active {
+    background-color: #ccc;
+}
+
+/* Main Content styling */
+.canvas {
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+h2 {
+    font-size: 18px;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    line-height: 1.4;
+    color: #000;
+}
+
+/* Color Buttons styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Individual Color assignments */
+#grey {
+    background-color: grey;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+#pink{
+    background-color: pink;
+}
