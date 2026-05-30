@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Colors - Mini Project</title>
+    <style>
+        /* Simple & Clean CSS styling */
+        body {
+            background-color: #212121;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.1s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #start {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #stop {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Start should change the Background color every second</h1>
+    
+    <div class="btn-container">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+    <script>
+        // 1. Random Hex Color Generate karne ka function
+        const randomColor = function () {
+            const hex = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+
+        // 2. Interval ID ko store karne ke liye global variable
+        let intervalId;
+
+       //  3.
+       const startButton = document.querySelector("#start") ;
+
+       const backgroundChanging = function() {
+        if(!intervalId) {
+            intervalId = setInterval( changeColor ,1000)
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = randomColor() ;
+        }
+       }
+
+       const stopChangingColor = function() {
+        clearInterval(intervalId) ;
+        intervalId = null ;
+        console.log("Stopped Successfully");
+        
+       }
+       
+       startButton.addEventListener('click' , backgroundChanging) ;
+
+       // 4. 
+       const stopButton = document.querySelector("#stop") ;
+       stopButton.addEventListener('click' , stopChangingColor) ;
+      
+
+    </script>
+</body>
+</html>
