@@ -43,7 +43,6 @@ promiseThree.then(function(userObj) {
     console.log(userObj);
     console.log(`user email is : ${userObj.email} and Name is : ${userObj.username}`);
     
-    
 })
 
 
@@ -129,6 +128,7 @@ async function getAllUsers() {
 
 
 // same thing in then and catch 
+// fetch ke liye ek special queue bnti hain called as microtask queue 
 
 fetch('https://api.github.com/users/shubham12an-2007')
 .then(function (response) {
@@ -145,4 +145,7 @@ fetch('https://api.github.com/users/shubham12an-2007')
 .catch((error) => {
     console.log(error);
     
-}) ;
+}).finally(() => {
+    console.log("TASK COMPLETED");
+    
+})
