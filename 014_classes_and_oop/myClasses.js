@@ -40,3 +40,4 @@ UserProto.prototype.changeUsername = function() {
 
 const tea = new UserProto('tea' ,1244 , 'tea@gamil.com' ) ;
 console.log(tea.encryptPassword());
+
